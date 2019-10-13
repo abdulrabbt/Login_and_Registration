@@ -1,0 +1,57 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    font: 15px;
+}
+body{
+    margin-left: 10px;
+}
+
+#dashboard {
+    border-bottom: 1px solid black;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+fieldset{
+    border-radius: 40px;
+    border-color: blue;
+    border-width: 3px;
+    height: 250px;
+    width: 400px;
+}
+
+label, input {
+    padding: 4px;
+    margin: 5px, 15px, 2px, 15px;
+    display: block;
+}
+
+button{
+    margin-top: 10px;
+}
+
+form {
+    max-width: 400px;
+    display: block;
+}
+
+input{
+    margin-top: 5px;
+    display: block;
+}
+
+.errors {
+    color: #e74c3c;
+}
+
+.login{
+    margin-top: 5px;
+}
+
+.registration{
+    margin-top: 5px;
+}

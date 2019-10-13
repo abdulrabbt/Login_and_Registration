@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/style.css">
+    <title>Login and Registration</title>
+</head>
+<body>
+        <% if(messages.registration) { %>
+            <h3>Registration Error</h3>
+            <ul>
+            <% for (var x of messages.registration) { %>
+                <li style="color:red;"><%= x %></li>
+            <% } %>
+            </ul>
+        <% } %>
+        <% if(messages.login) { %>
+            <h3>Login Error</h3>
+            <ul>
+            <% for (var x of messages.login) { %>
+                <li style="color:red;"><%= x %></li>
+            <% } %>
+            </ul>
+        <% } %>
+    <div class="login">
+        <fieldset>
+            <legend>Login</legend>
+            <form action="/login" method="POST">
+                <div>
+                    <label>Email:</label>
+                    <input type="text" name='email'>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" name="password">
+                </div>
+                <button>Login</button>
+            </form>
+        </fieldset>
+    </div>
+    <div class="registration">
+        <fieldset>
+            <legend>Registration</legend>
+            <form action="/register" method="POST">
+                <div>
+                    <label>First Name</label>
+                    <input type="text" name="first_name">
+                </div>
+                <div>
+                    <label>Last Name</label>
+                    <input type="text" name="last_name">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" name="email">
+                </div>
+                <div>
+                    <label>Birthday</label>
+                    <input type="date" name="birthday">
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" name="password">
+                </div>
+                <button>Register</button>
+            </form>
+        </fieldset>
+    </div>
+</body>
+</html>
